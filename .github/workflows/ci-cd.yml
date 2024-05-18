@@ -13,11 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
@@ -38,5 +35,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/dvwa-docker:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/dvwa-docker:latest
+          docker build -t 'cherevichenkosn@gamil.com/dvwa-docker:latest' .
+          docker push 'cherevichenkosn@gmail.com/dvwa-docker:latest'
