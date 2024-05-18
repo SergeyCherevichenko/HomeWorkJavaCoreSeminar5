@@ -13,6 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14' # или другая поддерживаемая версия Node.js
+
       - name: Checkout code
         uses: actions/checkout@v3
 
