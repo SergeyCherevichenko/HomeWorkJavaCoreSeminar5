@@ -35,5 +35,5 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t 'cherevichenkosn@gamil.com/dvwa-docker:latest' .
+          docker build -t 'cherevichenkosn@gmail.com/dvwa-docker:latest' .
           docker push 'cherevichenkosn@gmail.com/dvwa-docker:latest'
