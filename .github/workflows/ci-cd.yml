@@ -13,14 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Docker
-        uses: docker/setup-docker@latest
-
       - name: Log in to Docker Hub
-        run: |
-          echo Bradley-10121981 | docker login -u sergeychn --password-stdin
+        run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
-      - name: Build and push Docker image
+      - name: Build Docker image
         run: |
           docker build -t sergeychn/dvwa-docker:latest .
-          docker push sergeychn/dvwa-docker:latest
+      
+      - name: Push Docker image
+        run: docker push sergeychn/dvwa-docker:latest
