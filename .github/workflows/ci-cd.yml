@@ -13,8 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Docker
-        uses: docker/setup-docker@latest
+      # Удалено использование действия для установки Docker
+      # - name: Set up Docker
+      #   uses: docker/setup-docker@latest
 
       - name: Log in to Docker Hub
         run: |
