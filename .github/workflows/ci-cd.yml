@@ -13,15 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Удалено использование действия для установки Docker
-      # - name: Set up Docker
-      #   uses: docker/setup-docker@latest
-
       - name: Log in to Docker Hub
         run: |
           echo Bradley-10121981 | docker login -u sergeychn --password-stdin
 
       - name: Build and push Docker image
         run: |
-          docker build -t sergeychn/dvwa-docker:latest .
+          docker build -t sergeychn/dvwa-docker:latest /home/db/test_project
           docker push sergeychn/dvwa-docker:latest
+
