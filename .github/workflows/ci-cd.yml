@@ -21,9 +21,9 @@ jobs:
           echo "Bradley-10121981" | docker login -u sergeychn --password-stdin
 
       - name: Build and push Docker image
-       run: |
-    echo "Building Docker image..."
-    docker build -t sergeychn/dvwa-docker:latest .
-    echo "Pushing Docker image..."
-    docker push sergeychn/dvwa-docker:latest
+        run: |
+          echo "Building Docker image..."
+          docker build -t sergeychn/dvwa-docker:latest .
+          echo "Pushing Docker image..."
+          docker push sergeychn/dvwa-docker:latest
 
