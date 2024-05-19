@@ -18,10 +18,10 @@ jobs:
 
       - name: Log in to Docker Hub
         run: |
-          echo "Bradley-10121981" | docker login -u cherevichenkosn@gmail.com --password-stdin
+          echo "Bradley-10121981" | docker login -u cherevichenkosn --password-stdin
 
       - name: Build and push Docker image
         run: |
-          docker build -t cherevichenkosn@gmail.com/dvwa-docker:latest .
-          docker push cherevichenkosn@gmail.com/dvwa-docker:latest
+          docker build -t cherevichenkosn/dvwa-docker:latest .
+          docker push cherevichenkosn/dvwa-docker:latest
 
